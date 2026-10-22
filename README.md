@@ -2,14 +2,18 @@
 >Curso de Python desde cero de Midudev <br>
 >[Youtube](https://www.youtube.com/@midudev) | [Video](https://youtu.be/TkN2i-_4N4g) | [Clase](https://midu.dev/curso/python-desde-cero/)
 # Índice
-* [Introducción](#Introducción)
-* [Datos y Variables](#Datos-y-Variables)
-    * [Módulos](#Módulos)
-    * [Tipos](#Tipos)
-        * [Casting de tipos](#Casting-de-tipos)
-    * [Variables](#Variables)
-        * [Tipado de variables](#Tipado-de-variables)
-    * [Introduccion de datos input()](#Introduccion-de-datos-input())
+* [Introducción](#introducción)
+* [Datos y Variables](#datos-y-variables)
+    * [Módulos](#módulos)
+    * [Tipos](#tipos)
+        * [Casting de tipos](#casting-de-tipos)
+    * [Variables](#variables)
+        * [Tipado de variables](#tipado-de-variables)
+    * [Introduccion de datos input()](#introduccion-de-datos-input())
+* [Condicionales](#condicionales)
+    * [If, else y elif](#if,-else-y-elif)
+    * [Operadores Logicos](#operadores-logicos)
+    * [Condicionales anidados](#condicionales-anidados)
     
 ___
 # Introducción
@@ -62,6 +66,13 @@ Ejemplo:
 print("Hola", end=" ")
 print("Mundo!")
 ```
+* `import`: se utiliza para importar modulos de Python.
+Ejemplo: 
+```python
+import os
+os.system("clear")
+```
+Esto es para limpiar la terminal.
 
 ## Tipos
 En python existen varios tipos de datos, entre ellos: int, float, str, bool, list, tuple, set, dict, complex, bytes, bytearray, memoryview, range y frozenset. <br>
@@ -226,3 +237,83 @@ name, age = input("Introduce tu nombre y edad:\n").split()
 print(f"Hola, {name}! Tienes {age} años.")
 ```
 En este caso se separan por espacios pero se puede escoger otro como `split(",")` para separar por comas.
+
+# Condicionales
+## If, else y elif
+Ejecutar bolques de código basados en condiciones. <br>
+Ejemplo:
+```python
+nota = int(input("Introduce tu not del 0 al 10:\n"))
+if nota <= 5:
+    print("F")
+elif nota == 6:
+    print("D")
+elif nota == 7:
+    print("C")
+elif nota == 8:
+    print("B")
+elif nota == 9:
+    print("A")
+else:
+    print("No calificado")
+```
+Aqui podemos ver bifurcaciones. 
+>[!WARNING]
+>Mientras menos difurcaciones, mejor; ya que puede ser dificil de leer y mantener.
+
+## Operadores Logicos
+* `and` : Ambos se tienen que cumplir.
+* `or` : Uno de los dos se debe cumplir.
+* `not` : Niega el valor de la condición.
+
+### Tabla de verdad: and
+| A | B | A and B |
+|---|---|---|
+| T | T | T |
+| T | F | T |
+| F | T | T |
+| F | F | F |
+### Tabla de verdad: or
+| A | B | A or B |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | F |
+### Tabla de verdad: not
+| A | not B |
+|---|---|
+| T | F |
+| F | T |
+
+## Condicionales anidados
+Los condicionales pueden estar dentro de otros para evaluar múltiples niveles de decisiones.
+Ejemplo:
+```python
+edad = 20
+tiene_dinero = True
+ 
+if edad >= 18:
+   if tiene_dinero:
+      print("Puedes ir a la discoteca")
+   else:
+      print("Quédate en casa")
+else:
+   print("No puedes entrar a la disco")
+```
+
+## Booleanos
+### Operadores de comparación
+Los operadores de comparación devuelven valores booleanos al evaluar relaciones entre valores y cadenas de texto.
+Ejemplo:
+```python
+print(5 > 3)    # True
+print(5 < 3)    # False
+print(5 == 5)   # True
+print(5 != 3)   # True
+print(5 >= 5)   # True
+print(5 <= 3)   # False
+
+print("manzana" < "pera") # True
+print("Hola" == "hola") # False
+```
