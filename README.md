@@ -107,8 +107,8 @@ Ejemplo:
 ```python
 print(int(3.14)) # 3
 ```
->[!WARNING] <br>
->Importante: No redondea el número, simplemente elimina la parte decimal. <br>
+>[!WARNING]
+>Importante: No redondea el número, simplemente elimina la parte decimal.
 
 Para redondear un número decimal a su entero más cercano, se puede utilizar la función `round()`. <br>
 Ejemplo:
