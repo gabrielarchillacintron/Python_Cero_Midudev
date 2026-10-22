@@ -6,7 +6,7 @@
 * [Datos y Variables](#Datos-y-Variables)
     * [Módulos](#Módulos)
     * [Tipos](#Tipos)
-        *[Casting de tipos](#Casting-de-tipos)
+        * [Casting de tipos](#Casting-de-tipos)
 ___
 # Introducción
 Creador: Guido van Rossum
