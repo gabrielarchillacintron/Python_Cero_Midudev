@@ -7,6 +7,10 @@
     * [Módulos](#Módulos)
     * [Tipos](#Tipos)
         * [Casting de tipos](#Casting-de-tipos)
+    * [Variables](#Variables)
+        * [Tipado de variables](#Tipado-de-variables)
+    * [Introduccion de datos input()](#Introduccion-de-datos-input())
+    
 ___
 # Introducción
 Creador: Guido van Rossum
@@ -135,3 +139,90 @@ Ejemplo:
 print(bool("")) # False
 print(bool("Hola")) # True
 ``` 
+## Variables
+Las variables son contenedores que almacenan datos y permiten manipularlos a lo largo del programa. En Python, no es necesario declarar el tipo de dato de una variable, ya que se infiere automáticamente a partir del valor asignado. <br>
+Estas son reasignables, lo que significa que se puede cambiar el valor de una variable en cualquier momento. <br>
+### Tipado de variables
+* `Tipado dinamico` : El tipo de dato se determina automáticamente en tiempo de ejecución según el valor asignado a la variable. <br>
+Ejemplo:
+```python
+str_variable = "Hola"
+print(type(str_variable)) # <class 'str'>
+str_variable = 10
+print(type(str_variable)) # <class 'int'>
+```
+
+* `Tipado fuerte`: no realiza la conversión automática de tipos, por lo que es necesario realizar el casting de tipos de manera explícita. <br>
+Ejemplo:
+```python
+print(10 + "5") # TypeError: unsupported operand type(s) for +: 'int' and 'str'
+print(10 + int("5")) # 15
+```
+* Cadenas literales formateadas `(f-strings)`: permiten incrustar expresiones dentro de cadenas de texto utilizando llaves `{}`. <br>
+Ejemplo:
+```python
+name = "Alice"
+age = 30
+print(f"Me llamo {name} y tengo {age} años.") # Me llamo Alice y tengo 30 años.
+```
+
+>[!WARNING]
+>No recomendado: `name, age, city = "Alice", 30, "New York"`.
+>Ya que es menos legible y más propenso a errores, especialmente si se agregan o eliminan variables en el futuro.
+
+Se recomienda el uso de `snake_case` para los nombres de variables, funciones y métodos, y `PascalCase` para los nombres de clases. <br>
+Ejemplo:   
+```python
+class MyClass:
+    def my_method(self):
+        my_variable = 10
+``` 
+Python no tiene constantes, pero se puede simular su comportamiento utilizando variables con nombres en mayúsculas, el `UPPER_CASE`. <br>
+Ejemplo:
+```python
+PI = 3.14159
+```
+Otros formatos no validos son:
+```python
+myVariable = 10 # camelCase
+my-variable = 10 # kebab-case
+123123_variable = 10 # invalid
+my variable = 10 # invalid
+```
+Claro esta que Python posee variables reservadas, que no se pueden utilizar como nombres de variables, funciones o clases. <br>
+
+En Python, el tipado de variables es dinámico y fuerte. Esto significa que el tipo de una variable se determina automáticamente en tiempo de ejecución según el valor que se le asigne, y no se permite la conversión implícita entre tipos de datos incompatibles. <br>
+Ejemplo:
+```python
+variable = True # La variable es de tipo bool
+variable = 42 # Ahora la variable es de tipo int
+```
+* `Tipado estatico`: En lenguajes de tipado estático, el tipo de una variable se determina en tiempo de compilación y no puede cambiar durante la ejecución del programa. <br>
+Ejemplo:
+```python
+variable = "nombre"
+variable = 42
+variable = str = "palabra"
+```
+En este caso, `str` funciona como una documentación para indicar que la variable es de tipo cadena de texto, pero no impide que se le asigne un valor de otro tipo. <br>
+
+## Introduccion de datos input()
+Esta función permite al usuario introducir datos durante la ejecución del programa. <br>
+Ejemplo:
+```python
+name = input("Introduce tu nombre:\n")
+print(f"Hola, {name}!")
+```
+Estos tambien se puesden restringir a un tipo de dato específico, como `int` o `float`, utilizando el casting de tipos. <br>
+Ejemplo:
+```python
+age = int(input("Introduce tu edad:\n"))
+print(f"Tienes {age} años.")
+```
+De igual forma se puede introiducir mas de un dato a la vez, separandolos por comas. <br>
+Ejemplo:
+```python
+name, age = input("Introduce tu nombre y edad:\n").split()
+print(f"Hola, {name}! Tienes {age} años.")
+```
+En este caso se separan por espacios pero se puede escoger otro como `split(",")` para separar por comas.
