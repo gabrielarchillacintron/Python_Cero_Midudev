@@ -116,11 +116,11 @@ Ejemplo:
 print(round(3.14)) # 3
 print(round(3.5)) # 4
 ```
->[!NOTE] <br>
->Pero hay casos extraños, como `print(round(2.5))` que nos devuelve `2` y `print(round(3.5))` que nos devuelve `4`. <br>
->Esto se debe a que Python utiliza el método de redondeo "round half to even" o "redondeo al par más cercano", que redondea los números a su entero más cercano, y en caso de estar exactamente a la mitad, redondea al número par más cercano. <br>
+>[!NOTE]
+>Pero hay casos extraños, como `print(round(2.5))` que nos devuelve `2` y `print(round(3.5))` que nos devuelve `4`.
+>Esto se debe a que Python utiliza el método de redondeo "round half to even" o "redondeo al par más cercano", que redondea los números a su entero más cercano, y en caso de estar exactamente a la mitad, redondea al número par más cercano.
 >Por lo que el par mas cercano a `2.5` es `2`, mientras que el par más cercano a `3.5` es `4`. <br>
->De esta forma se distribuye el redondeo de manera más equitativa y se evita un sesgo acumulativo en cálculos que involucren múltiples redondeos. <br>
+>De esta forma se distribuye el redondeo de manera más equitativa y se evita un sesgo acumulativo en cálculos que involucren múltiples redondeos.
 
 En el casso de numeros como booleanos, todos los valores distintos de cero se consideran `True`, mientras que el valor `0` se considera `False`. <br>
 Ejemplo:
