@@ -91,8 +91,7 @@ print("4. El resultado debería ser 1")
 print("--------------")
 
 print("Respuesta:")
-pi = 3.14159
-pi_redondeado = round(pi)
-division_entera = pi_redondeado // 2
-print(f"PI redondeado: {pi_redondeado}")
-print(f"División entera: {division_entera}")
+respuesta = int(round(3.14159) // 2)
+print("PI = 3.14159")
+print("Pi redondeado = ", round(3.14159))
+print("División entera entre el número PI redondeado y 2 = ", respuesta)
