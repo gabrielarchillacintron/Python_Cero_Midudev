@@ -6,6 +6,8 @@
 # Pide al usuario que introduzca dos números y muestra un mensaje
 # indicando cuál es mayor o si son iguales
 
+print("--------------")
+
 print("Ejercicio 1: Determinar el mayor de dos números")
 print("Introduzca dos números")
 primer_numero = int(input("Primer número:"))
@@ -20,6 +22,8 @@ else:
 # Ejercicio 2: Calculadora simple
 # Pide al usuario dos números y una operación (+, -, *, /)
 # Realiza la operación y muestra el resultado (maneja la división entre zero)
+
+print("--------------")
 
 print("Ejercicio 2: Calculadora simple")
 print("Introduzca dos números y una operacion (+, -, *, /)")
@@ -44,6 +48,8 @@ else:
 # Pide al usuario que introduzca un año y determina si es bisiesto.
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
 
+print("--------------")
+
 print("Ejercicio 3: Año bisiesto")
 año = int(input("Introduzca un año:"))
 if (año % 4 == 0 and año % 100 != 0) or año % 400 == 0:
@@ -59,6 +65,8 @@ else:
 # - Adulto (18-64 años)
 # - Adulto mayor (65 años o más)
 
+print("--------------")
+
 print("Ejercicio 4: Categorizar edades")
 edad = int(input("Introduzca edad:"))
 if 0<= edad <= 2:
@@ -73,3 +81,5 @@ elif edad >= 65:
     print("Adulto mayor")
 else:
     print("No valida.")
+
+print("--------------")
