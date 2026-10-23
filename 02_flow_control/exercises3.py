@@ -12,6 +12,14 @@
 print("--------------")
 
 print("Ejercicio 1:")
+lista = [1,2,3,4,5]
+print(lista)
+lista.append(6)
+print(lista)
+lista.insert(2,10)
+print(lista)
+lista[0] = 0
+print(lista)
 
 # Ejercicio 2: Combinar y limpiar listas
 # Crea dos listas:
@@ -25,6 +33,19 @@ print("Ejercicio 1:")
 print("--------------")
 
 print("Ejercicio 2:")
+lista_a = [1, 2, 3]
+lista_b = [4, 5, 6, 1, 2]
+print(lista_a, lista_b)
+lista_a.extend(lista_b)
+print(lista_a)
+lista_a.remove(1)
+print(lista_a)
+eliminado = lista_a.pop(3)
+print(eliminado)
+print(lista_a)
+print(lista_b)
+lista_b.clear()
+print(lista_b)
 
 # Ejercicio 3: Slicing y eliminación con del
 # Crea una lista con los números del 1 al 10.
@@ -34,6 +55,10 @@ print("Ejercicio 2:")
 print("--------------")
 
 print("Ejercicio 3:")
+lista = [1,2,3,4,5,6,7,8,9,10]
+print(lista)
+del lista[2:5]
+print(lista)
 
 # Ejercicio 4: Ordenar y contar
 # Crea una lista con los siguientes números: [5, 2, 8, 1, 9, 4, 2].
@@ -44,6 +69,12 @@ print("Ejercicio 3:")
 print("--------------")
 
 print("Ejercicio 4:")
+lista = [5, 2, 8, 1, 9, 4, 2]
+print(lista)
+lista.sort()
+print(lista)
+print(lista.count(2))
+print(7 in lista)
 
 # Ejercicio 5: Copia vs. Referencia
 # Crea una lista llamada original con los números [1, 2, 3].
@@ -56,6 +87,13 @@ print("Ejercicio 4:")
 print("--------------")
 
 print("Ejercicio 5:")
+original = [1, 2, 3]
+print(original)
+copia_1 = original[::]
+copia_2 = original.copy()
+referncia = original
+referncia[0] = 10
+print(original,"\n", copia_1, "\n", copia_2, "\n", referncia)
 
 # Ejercicio 6: Ordenar strings sin diferenciar mayúsculas y minúsculas.
 # Crea una lista con las siguientes cadenas: ["Manzana", "pera", "BANANA", "naranja"].
@@ -64,5 +102,9 @@ print("Ejercicio 5:")
 print("--------------")
 
 print("Ejercicio 6:")
+lista = ["Manzana", "pera", "BANANA", "naranja"]
+print(lista)
+lista.sort(key=str.lower)
+print(lista)
 
 print("--------------")

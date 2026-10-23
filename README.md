@@ -477,3 +477,11 @@ En el caso de texto, se puede utilizar el parámetro `key=str.lower` para ordena
 >print(lista)  # [10, 50]
 >```
 
+>[!NOTE]
+>Formas de copiar.
+>```python
+>original = [1, 2, 3] 
+>copia_1 = original[::] # slicing
+>copia_2 = original.copy()
+>referncia = original # Si le haces un cambio a la referencia, se le aplicara a la original.
+>```
