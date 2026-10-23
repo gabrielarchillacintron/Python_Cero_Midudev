@@ -25,6 +25,7 @@
     * [Slicing de listas](#slicing-de-listas)
     * [Modificar elementos de una lista](#modificar-elementos-de-una-lista)
     * [Agregar elementos a una lista](#agregar-elementos-a-una-lista)
+    * [Métodos para listas](#métodos-para-listas)
     
     
     
@@ -451,3 +452,26 @@ print(lista)  # [10, 20, 30, 40, 50, 60, 70, 80]
 lista += [90, 100]  # Agrega múltiples elementos al final de la lista
 print(lista)  # [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 ```
+## Metodos para listas
+* `append(elemento)`: Agrega un solo elemento al final de la lista.
+* `extend(lista)`: Agrega múltiples elementos al final de la lista.
+* `insert(indice, elemento)`: Inserta un elemento en la posición especificada.
+* `remove(elemento)`: Elimina la primera aparición del elemento en la lista.
+* `pop(indice)`: Elimina y devuelve el elemento en la posición especificada. Si no se especifica el índice, elimina y devuelve el último elemento.
+* `index(elemento)`: Devuelve el índice de la primera aparición del elemento.
+* `count(elemento)`: Devuelve el número de veces que aparece el elemento en la lista.
+* `sort()`: Ordena la lista en orden ascendente.
+* `reverse()`: Invierte el orden de los elementos en la lista.
+* `clear()`: Elimina todos los elementos de la lista.
+* `copy()`: Devuelve una copia superficial de la lista.
+* `len(lista)`: Devuelve la cantidad de elementos en la lista de 1 a n.
+
+>[!NOTE]
+>Para eliminar un rango de elementos de una lista se puede utilizar slicing y la palabra clave `del`.
+>Ejemplo:
+>```python
+>lista = [10, 20, 30, 40, 50]
+>del lista[1:4]  # Elimina los elementos desde el índice 1 hasta el 3
+>print(lista)  # [10, 50]
+>```
+
