@@ -9,14 +9,23 @@
         * [Casting de tipos](#casting-de-tipos)
     * [Variables](#variables)
         * [Tipado de variables](#tipado-de-variables)
-    * [Introduccion de datos input()](#introduccion-de-datos-input())
+    * [Introduccion de datos input()](#introduccion-de-datos-input)
 * [Condicionales](#condicionales)
-    * [If, else y elif](#if,-else-y-elif)
+    * [If, else y elif](#if-else-y-elif)
     * [Operadores Logicos](#operadores-logicos)
+        * [Tabla de verdad: and](#tabla-de-verdad-and)
+        * [Tabla de verdad: or](#tabla-de-verdad-or)
+        * [Tabla de verdad: not](#tabla-de-verdad-not)
     * [Condicionales anidados](#condicionales-anidados)
     * [Booleanos](#booleanos)
         * [Operadores de comparación](#operadores-de-comparación)
     * [Operadores Ternarios](#operadores-ternarios)
+* [Listas](#listas)
+    * [Acceder a elementos de una lista](#acceder-a-elementos-de-una-lista)
+    * [Slicing de listas](#slicing-de-listas)
+    * [Modificar elementos de una lista](#modificar-elementos-de-una-lista)
+    * [Agregar elementos a una lista](#agregar-elementos-a-una-lista)
+    
     
     
 ___
@@ -344,4 +353,101 @@ print("La condición ternaria:")
 edad = 17 
 mensaje = "Es mayor de edad" if edad >= 18 else "Es menor de edad"
 print(mensaje)
+```
+
+# Listas
+Conjunto de elementos. Se pueden modificar, agregar o eliminar elementos después de su creación.
+Ejemplo:
+```python
+lista = [1, 2, 3, 4, 5]
+print(lista)
+```
+Estan pueden tener tipos ya que pueden contener elementos de diferentes tipos.
+Ejemplo:
+```python
+lista_mixta = [1, "Hola", 3.14, True]
+print(lista_mixta)
+```
+De igual manera los puede identificar en ella.
+Ejemplo:
+```python
+lista = list(int | str | float | bool) = [1, "Hola", 3.14, True]
+```
+Se pueden tener listas vacias y una lista de listas. `lista = []`<br>
+Asi mismo matrices pueden ser representadas como listas de listas.
+Ejemplo:
+```python
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matriz)
+```
+
+## Acceder a elementos de una lista
+Se puede acceder a los elementos de una lista utilizando índices. Los índices comienzan en 0.
+Ejemplo:
+```python
+lista = [10, 20, 30, 40, 50]
+print(lista[0])  # 10
+print(lista[2])  # 30
+print(lista[-1]) # 50 (último elemento). Mientras incrementamos el índice desde el final, -1 es el último, -2 el penúltimo, y así sucesivamente.
+```
+En el case de acceder a un elemento que esta en una lista dentro de otra lista, se utilizan múltiples índices.
+Ejemplo:
+```python
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matriz[0][1])  # 2 (primer fila, segundo elemento o columna)
+print(matriz[2][0])  # 7 (tercera fila, primer elemento o columna)
+```
+
+## Slicing de listas
+Se puede obtener una sublista utilizando la sintaxis de slicing.
+Sus parámetros son `[inicio:fin:paso]`.
+Ejemplo:
+```python
+lista = [10, 20, 30, 40, 50]
+print(lista[1:4])  # [20, 30, 40] (sublista desde el índice 1 hasta el 3)
+print(lista[:3])   # [10, 20, 30] (sublista desde el inicio hasta el índice 2)
+print(lista[2:])   # [30, 40, 50] (sublista desde el índice 2 hasta el final)
+print(lista[:])    # [10, 20, 30, 40, 50] (toda la lista)
+print(lista[::2])  # [10, 30, 50] (sublista con paso 2)
+print(lista[::3])  # [10, 40] (sublista con paso 3)
+print(lista[::-1]) # [50, 40, 30, 20, 10] (sublista en orden inverso)
+```
+>[!WARNING]
+>El el parametro `fin` no está incluido en el slicing.
+
+>[!Note]
+>Para saber la longitud de una lista se utiliza `len(lista)`
+
+## Modificar elementos de una lista
+Se pueden modificar elementos de una lista accediendo a ellos mediante su índice.
+Ejemplo:
+```python
+lista = [10, 20, 30, 40, 50]
+lista[1] = 25
+print(lista)  # [10, 25, 30, 40, 50]
+```
+## Agregar elementos a una lista
+Se pueden agregar elementos a una lista utilizando los métodos `append()` y `extend()`.
+Ejemplo:
+```python
+lista = [10, 20, 30]
+lista.append(40)  # Agrega un solo elemento al final de la lista
+print(lista)  # [10, 20, 30, 40]
+
+lista.extend([50, 60])  # Agrega múltiples elementos al final de la lista
+print(lista)  # [10, 20, 30, 40, 50, 60]
+
+lista = lista + [70, 80]  # Agrega múltiples elementos al final de la lista
+print(lista)  # [10, 20, 30, 40, 50, 60, 70, 80]
+
+lista += [90, 100]  # Agrega múltiples elementos al final de la lista
+print(lista)  # [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 ```
