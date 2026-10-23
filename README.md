@@ -1,6 +1,7 @@
 >[!NOTE]
 >Curso de Python desde cero de Midudev <br>
 >[Youtube](https://www.youtube.com/@midudev) | [Video](https://youtu.be/TkN2i-_4N4g) | [Clase](https://midu.dev/curso/python-desde-cero/)
+___
 # Índice
 * [Introducción](#introducción)
 * [Datos y Variables](#datos-y-variables)
@@ -26,9 +27,8 @@
     * [Modificar elementos de una lista](#modificar-elementos-de-una-lista)
     * [Agregar elementos a una lista](#agregar-elementos-a-una-lista)
     * [Métodos para listas](#métodos-para-listas)
-    
-    
-    
+* [Bucles](#bucles)
+   
 ___
 # Introducción
 Creador: Guido van Rossum
@@ -485,3 +485,5 @@ En el caso de texto, se puede utilizar el parámetro `key=str.lower` para ordena
 >copia_2 = original.copy()
 >referncia = original # Si le haces un cambio a la referencia, se le aplicara a la original.
 >```
+
+# Bucles
