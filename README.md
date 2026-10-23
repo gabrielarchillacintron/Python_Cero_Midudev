@@ -314,6 +314,21 @@ print(5 != 3)   # True
 print(5 >= 5)   # True
 print(5 <= 3)   # False
 
-print("manzana" < "pera") # True
-print("Hola" == "hola") # False
+print("manzana" < "pera") # True; Comparacion alfabetica letra por letra
+print("Hola" == "hola") # False; sensible a mayusculas
 ```
+Tambien pasa que una variable de tipo numero distinto de cero sera True en un caso de condicion booleana y en una cadena de texto no vacia tambien sera True.
+Ejemplo:
+```python
+numero = 5
+if numero: # True 
+numero = 0
+if numero: # False
+##########################
+nombre = "Juan"
+if nombre:
+nombre = ""
+if nombre:
+```
+
+##
