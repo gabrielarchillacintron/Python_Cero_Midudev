@@ -460,7 +460,9 @@ print(lista)  # [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 * `pop(indice)`: Elimina y devuelve el elemento en la posición especificada. Si no se especifica el índice, elimina y devuelve el último elemento.
 * `index(elemento)`: Devuelve el índice de la primera aparición del elemento.
 * `count(elemento)`: Devuelve el número de veces que aparece el elemento en la lista.
-* `sort()`: Ordena la lista en orden ascendente.
+* `sort()`: Ordena la lista en orden ascendente. <br>
+En el caso de texto, se puede utilizar el parámetro `key=str.lower` para ordenar sin diferenciar mayúsculas y minúsculas.
+* `sorted(lista)`: Devuelve una nueva lista ordenada sin modificar la original.
 * `reverse()`: Invierte el orden de los elementos en la lista.
 * `clear()`: Elimina todos los elementos de la lista.
 * `copy()`: Devuelve una copia superficial de la lista.
