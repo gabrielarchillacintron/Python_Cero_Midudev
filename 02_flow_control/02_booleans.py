@@ -26,3 +26,9 @@ if nombre:
 nombre = ""
 if nombre:
     print("El nombre no es vacío")
+
+# Operadores Ternarios
+print("La condición ternaria:")
+edad = 17 
+mensaje = "Es mayor de edad" if edad >= 18 else "Es menor de edad"
+print(mensaje)

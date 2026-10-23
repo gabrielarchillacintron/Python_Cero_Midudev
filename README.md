@@ -14,6 +14,10 @@
     * [If, else y elif](#if,-else-y-elif)
     * [Operadores Logicos](#operadores-logicos)
     * [Condicionales anidados](#condicionales-anidados)
+    * [Booleanos](#booleanos)
+        * [Operadores de comparación](#operadores-de-comparación)
+    * [Operadores Ternarios](#operadores-ternarios)
+    
     
 ___
 # Introducción
@@ -331,4 +335,13 @@ nombre = ""
 if nombre:
 ```
 
-##
+## Operadores Ternarios
+En Python, la condición ternaria es una forma compacta de escribir un if-else en una sola línea de código. Es ideal para simplificar el código cuando necesitas asignar un valor basado en una condición. <br>
+`[valor_si_verdadero] if [condición] else [valor_si_falso]`
+Ejemplo:
+```python
+print("La condición ternaria:")
+edad = 17 
+mensaje = "Es mayor de edad" if edad >= 18 else "Es menor de edad"
+print(mensaje)
+```
