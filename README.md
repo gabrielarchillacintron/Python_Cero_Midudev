@@ -569,8 +569,7 @@ for letra in letras:
 >![NOTE]
 >Para ver cómo se ejecuta el código paso a paso, se puede probar en Python Tutor, una herramienta interactiva para analizar la ejecución de código en Python.
 >
->[Python Tutor](https://pythontutor.com/index.html)
->
+[Python Tutor](https://pythontutor.com/index.html)
 ![](03_loops\Images\Python-Tutor.png)
 
 ### Break y Continue
