@@ -565,10 +565,10 @@ for letra in letras:
        print(f"{letra}{numero}") # Imprime la combinación de cada letra con cada número
 ```
 
->![NOTE]
+>[!NOTE]
 >Para ver cómo se ejecuta el código paso a paso, se puede probar en Python Tutor, una herramienta interactiva para analizar la ejecución de código en Python.
-
-[Python Tutor](https://pythontutor.com/index.html)
+>
+>[Python Tutor](https://pythontutor.com/index.html)
 
 ### Break y Continue
 * `break`: Permite salir del bucle antes de que la condición deje de cumplirse.
@@ -604,7 +604,7 @@ for num in range(0, 1000, 5):
 for num in range(10, 0, -1):
    print(num) # Imprime los números del 10 al 1 en orden descendente
 ```
->![WARNING]
+>[!WARNING]
 >Range no crea una lista por sí misma, sino un objeto iterable que genera los números bajo demanda. 
 >
 >Para obtener una lista, se puede usar `list(range(...))`.
