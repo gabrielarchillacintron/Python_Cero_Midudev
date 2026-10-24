@@ -569,6 +569,8 @@ for letra in letras:
 >Para ver cómo se ejecuta el código paso a paso, se puede probar en Python Tutor, una herramienta interactiva para analizar la ejecución de código en Python.
 >
 >[Python Tutor](https://pythontutor.com/index.html)
+>
+>![Python Tutor](03_loops\Images\Python-Tutor.png)
 
 ### Break y Continue
 * `break`: Permite salir del bucle antes de que la condición deje de cumplirse.
