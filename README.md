@@ -505,7 +505,7 @@ while contador < 5:
     print(contador)
     contador += 1
 ```
->![WARNING]
+>[!WARNING]
 >Es importante incrementar para evitar un bucle infinito.
 
 * `break`: Permite salir del bucle antes de que la condición deje de cumplirse.
