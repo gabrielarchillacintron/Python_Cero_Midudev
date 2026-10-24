@@ -27,9 +27,13 @@ ___
     * [Modificar elementos de una lista](#modificar-elementos-de-una-lista)
     * [Agregar elementos a una lista](#agregar-elementos-a-una-lista)
     * [Métodos para listas](#métodos-para-listas)
-* [Bucles](#bucles)
+* [Bucles Loops](#bucles-loops)
     * [While](#while)
         * [Try Except](#try-except)
+    * [For](#for)
+        * [For anidados](#for-anidados)
+        * [Break y Continue](#break-y-continue)
+        * [Comprensión de listas](#comprensión-de-listas-list-comprehension)
    
 ___
 # Introducción
@@ -82,7 +86,7 @@ Ejemplo:
 print("Hola", end=" ")
 print("Mundo!")
 ```
-* `import`: se utiliza para importar modulos de Python.
+* `import`: se utiliza para importar modulos de Python. <br>
 Ejemplo: 
 ```python
 import os
@@ -303,7 +307,7 @@ Aqui podemos ver bifurcaciones.
 | F | T |
 
 ## Condicionales anidados
-Los condicionales pueden estar dentro de otros para evaluar múltiples niveles de decisiones.
+Los condicionales pueden estar dentro de otros para evaluar múltiples niveles de decisiones. <br>
 Ejemplo:
 ```python
 edad = 20
@@ -320,7 +324,7 @@ else:
 
 ## Booleanos
 ### Operadores de comparación
-Los operadores de comparación devuelven valores booleanos al evaluar relaciones entre valores y cadenas de texto.
+Los operadores de comparación devuelven valores booleanos al evaluar relaciones entre valores y cadenas de texto. <br>
 Ejemplo:
 ```python
 print(5 > 3)    # True
@@ -333,7 +337,7 @@ print(5 <= 3)   # False
 print("manzana" < "pera") # True; Comparacion alfabetica letra por letra
 print("Hola" == "hola") # False; sensible a mayusculas
 ```
-Tambien pasa que una variable de tipo numero distinto de cero sera True en un caso de condicion booleana y en una cadena de texto no vacia tambien sera True.
+Tambien pasa que una variable de tipo numero distinto de cero sera True en un caso de condicion booleana y en una cadena de texto no vacia tambien sera True. <br>
 Ejemplo:
 ```python
 numero = 5
@@ -349,7 +353,7 @@ if nombre:
 
 ## Operadores Ternarios
 En Python, la condición ternaria es una forma compacta de escribir un if-else en una sola línea de código. Es ideal para simplificar el código cuando necesitas asignar un valor basado en una condición. <br>
-`[valor_si_verdadero] if [condición] else [valor_si_falso]`
+`[valor_si_verdadero] if [condición] else [valor_si_falso]` <br>
 Ejemplo:
 ```python
 print("La condición ternaria:")
@@ -359,25 +363,25 @@ print(mensaje)
 ```
 
 # Listas
-Conjunto de elementos. Se pueden modificar, agregar o eliminar elementos después de su creación.
+Conjunto de elementos. Se pueden modificar, agregar o eliminar elementos después de su creación. <br>
 Ejemplo:
 ```python
 lista = [1, 2, 3, 4, 5]
 print(lista)
 ```
-Estan pueden tener tipos ya que pueden contener elementos de diferentes tipos.
+Estan pueden tener tipos ya que pueden contener elementos de diferentes tipos. <br>
 Ejemplo:
 ```python
 lista_mixta = [1, "Hola", 3.14, True]
 print(lista_mixta)
 ```
-De igual manera los puede identificar en ella.
+De igual manera los puede identificar en ella. <br>
 Ejemplo:
 ```python
 lista = list(int | str | float | bool) = [1, "Hola", 3.14, True]
 ```
 Se pueden tener listas vacias y una lista de listas. `lista = []`<br>
-Asi mismo matrices pueden ser representadas como listas de listas.
+Asi mismo matrices pueden ser representadas como listas de listas. <br>
 Ejemplo:
 ```python
 matriz = [
@@ -389,7 +393,7 @@ print(matriz)
 ```
 
 ## Acceder a elementos de una lista
-Se puede acceder a los elementos de una lista utilizando índices. Los índices comienzan en 0.
+Se puede acceder a los elementos de una lista utilizando índices. Los índices comienzan en 0. <br>
 Ejemplo:
 ```python
 lista = [10, 20, 30, 40, 50]
@@ -397,7 +401,7 @@ print(lista[0])  # 10
 print(lista[2])  # 30
 print(lista[-1]) # 50 (último elemento). Mientras incrementamos el índice desde el final, -1 es el último, -2 el penúltimo, y así sucesivamente.
 ```
-En el case de acceder a un elemento que esta en una lista dentro de otra lista, se utilizan múltiples índices.
+En el case de acceder a un elemento que esta en una lista dentro de otra lista, se utilizan múltiples índices. <br>
 Ejemplo:
 ```python
 matriz = [
@@ -410,8 +414,8 @@ print(matriz[2][0])  # 7 (tercera fila, primer elemento o columna)
 ```
 
 ## Slicing de listas
-Se puede obtener una sublista utilizando la sintaxis de slicing.
-Sus parámetros son `[inicio:fin:paso]`.
+Se puede obtener una sublista utilizando la sintaxis de slicing. <br>
+Sus parámetros son `[inicio:fin:paso]`. <br>
 Ejemplo:
 ```python
 lista = [10, 20, 30, 40, 50]
@@ -430,7 +434,7 @@ print(lista[::-1]) # [50, 40, 30, 20, 10] (sublista en orden inverso)
 >Para saber la longitud de una lista se utiliza `len(lista)`
 
 ## Modificar elementos de una lista
-Se pueden modificar elementos de una lista accediendo a ellos mediante su índice.
+Se pueden modificar elementos de una lista accediendo a ellos mediante su índice. <br>
 Ejemplo:
 ```python
 lista = [10, 20, 30, 40, 50]
@@ -438,7 +442,7 @@ lista[1] = 25
 print(lista)  # [10, 25, 30, 40, 50]
 ```
 ## Agregar elementos a una lista
-Se pueden agregar elementos a una lista utilizando los métodos `append()` y `extend()`.
+Se pueden agregar elementos a una lista utilizando los métodos `append()` y `extend()`. <br>
 Ejemplo:
 ```python
 lista = [10, 20, 30]
@@ -472,6 +476,7 @@ En el caso de texto, se puede utilizar el parámetro `key=str.lower` para ordena
 
 >[!NOTE]
 >Para eliminar un rango de elementos de una lista se puede utilizar slicing y la palabra clave `del`.
+>
 >Ejemplo:
 >```python
 >lista = [10, 20, 30, 40, 50]
@@ -488,9 +493,9 @@ En el caso de texto, se puede utilizar el parámetro `key=str.lower` para ordena
 >referncia = original # Si le haces un cambio a la referencia, se le aplicara a la original.
 >```
 
-# Bucles
+# Bucles Loops
 ## While
-Bloque de codigo repetitivo ientras se cumpla una condicion.
+Bloque de codigo repetitivo ientras se cumpla una condicion. <br>
 Ejemplo:
 ```python
 contador = 0
@@ -506,7 +511,7 @@ while contador < 5:
 * `else`: Se ejecuta cuando el bucle termina normalmente, es decir, sin que se haya usado `break`. De haber usado `break`, el bloque `else` no se ejecutará.
 
 ### Try Except
-Bloque de código para manejar excepciones y errores.
+Bloque de código para manejar excepciones y errores. <br>
 Ejemplo:
 ```python
 numero = -1
@@ -519,4 +524,62 @@ while numero < 0:
     print("Lo que introduces debe ser un número, que si no peta!")
 
 print(f"El número que has introducido es {numero}")
+```
+## For
+Bloque de codigo repetitivo para cada elemento en una secuencia. <br>
+Ejemplo:
+```python
+frutas = ["manzana", "pera", "mandarina"]
+for fruta in frutas:
+   print(fruta) # Imprime cada fruta de la lista
+
+cadena = "midudev"
+for caracter in cadena:
+   print(caracter) # Imprime cada caracter de la cadena
+```
+Esto se puede hacer con listas, cadenas y cualquier objeto iterable en Python.
+>[!NOTE]
+>Son más recomendados que while cuando conocemos cuántas veces queremos iterar.
+
+### índice con For
+Para obtener el índice de cada elemento en un bucle for, se puede usar la función `enumerate()`. <br>
+Ejemplo:
+```python
+frutas = ["manzana", "pera", "mandarina"]
+for index, fruta in enumerate(frutas):
+   print(f"El índice es {index} y la fruta es {fruta}") # Imprime el índice y la fruta correspondiente
+```
+Puedes poner cualquier nombre a las variables que reciban el índice (primera posición) y el valor (segunda posición) dentro del bucle for.
+
+### For anidados
+Los bucles for pueden anidarse dentro de otros bucles for para iterar sobre múltiples secuencias. <br>
+Ejemplo:
+```python
+letras = ["A", "B", "C"]
+numeros = [1, 2, 3]
+
+for letra in letras:
+   for numero in numeros:
+       print(f"{letra}{numero}") # Imprime la combinación de cada letra con cada número
+```
+![](03_loops\Images\Python-Tutor-Example.png)
+
+>![NOTE]
+>Para ver cómo se ejecuta el código paso a paso, se puede probar en Python Tutor, una herramienta interactiva para analizar la ejecución de código en Python.
+>
+>[Python Tutor](https://pythontutor.com/index.html)
+>
+>![](03_loops\Images\Python-Tutor.png)
+
+### Break y Continue
+* `break`: Permite salir del bucle antes de que la condición deje de cumplirse.
+* `continue`: Salta la iteración actual y continúa con la siguiente iteración.
+
+### Comprensión de listas (list comprehension)
+Es una forma concisa de crear listas a partir de otras listas o secuencias. <br>
+Ejemplo:
+```python
+animales = ["perro", "gato", "raton", "loro", "pez", "canario"]
+animales_mayus = [animal.upper() for animal in animales]
+print(animales_mayus) # Imprime la lista de animales en mayúsculas
 ```
