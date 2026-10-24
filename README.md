@@ -36,6 +36,7 @@ ___
         * [Comprensión de listas](#comprensión-de-listas-list-comprehension)
             * [Condición dentro de list comprehension](#condición-dentro-de-list-comprehension)
         * [Rango (range)](#rango-range)
+            * [Guion bajo `_`](#guion-bajo-_)
    
 ___
 # Introducción
@@ -619,3 +620,10 @@ for num in range(10, 0, -1):
 >print(lista_numeros) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 >```
 
+#### Guion bajo `_` 
+El guion bajo `_` se utiliza comúnmente como una variable temporal o para indicar que un valor no será utilizado. <br>
+Ejemplo:
+```python
+for _ in range(5):
+    print("Hacer 5 veces algo") # Se ignora el valor de la variable de bucle `_`
+```
