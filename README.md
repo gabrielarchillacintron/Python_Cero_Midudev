@@ -565,6 +565,8 @@ for letra in letras:
        print(f"{letra}{numero}") # Imprime la combinación de cada letra con cada número
 ```
 
+![Python Tutor Example](03_loops/Images/Python-Tutor-Example.png)
+
 >[!NOTE]
 >Para ver cómo se ejecuta el código paso a paso, se puede probar en Python Tutor, una herramienta interactiva para analizar la ejecución de código en Python.
 >
