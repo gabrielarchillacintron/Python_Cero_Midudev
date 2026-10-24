@@ -570,7 +570,7 @@ for letra in letras:
 >
 >[Python Tutor](https://pythontutor.com/index.html)
 >
->![Python Tutor](03_loops\Images\Python-Tutor.png)
+>![Python Tutor](03_loops/Images/Python-Tutor.png)
 
 ### Break y Continue
 * `break`: Permite salir del bucle antes de que la condición deje de cumplirse.
