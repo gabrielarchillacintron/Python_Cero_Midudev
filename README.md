@@ -28,6 +28,8 @@ ___
     * [Agregar elementos a una lista](#agregar-elementos-a-una-lista)
     * [Métodos para listas](#métodos-para-listas)
 * [Bucles](#bucles)
+    * [While](#while)
+        * [Try Except](#try-except)
    
 ___
 # Introducción
@@ -487,3 +489,34 @@ En el caso de texto, se puede utilizar el parámetro `key=str.lower` para ordena
 >```
 
 # Bucles
+## While
+Bloque de codigo repetitivo ientras se cumpla una condicion.
+Ejemplo:
+```python
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1
+```
+>![WARNING]
+>Es importante incrementar para evitar un bucle infinito.
+
+* `break`: Permite salir del bucle antes de que la condición deje de cumplirse.
+* `continue`: Salta la iteración actual y continúa con la siguiente iteración.
+* `else`: Se ejecuta cuando el bucle termina normalmente, es decir, sin que se haya usado `break`. De haber usado `break`, el bloque `else` no se ejecutará.
+
+### Try Except
+Bloque de código para manejar excepciones y errores.
+Ejemplo:
+```python
+numero = -1
+while numero < 0:
+  try:
+    numero = int(input("Escribe un número positivo: "))
+    if numero < 0:
+      print("El número debe ser positivo. Intenta otra vez, majo o maja.")
+  except:
+    print("Lo que introduces debe ser un número, que si no peta!")
+
+print(f"El número que has introducido es {numero}")
+```
