@@ -34,6 +34,8 @@ ___
         * [For anidados](#for-anidados)
         * [Break y Continue](#break-y-continue)
         * [Comprensión de listas](#comprensión-de-listas-list-comprehension)
+            * [Condición dentro de list comprehension](#condición-dentro-de-list-comprehension)
+        * [Rango (range)](#rango-range)
    
 ___
 # Introducción
@@ -569,7 +571,7 @@ for letra in letras:
 >
 >[Python Tutor](https://pythontutor.com/index.html)
 >
->![](03_loops\Images\Python-Tutor.png)
+![](03_loops\Images\Python-Tutor.png)
 
 ### Break y Continue
 * `break`: Permite salir del bucle antes de que la condición deje de cumplirse.
@@ -583,3 +585,36 @@ animales = ["perro", "gato", "raton", "loro", "pez", "canario"]
 animales_mayus = [animal.upper() for animal in animales]
 print(animales_mayus) # Imprime la lista de animales en mayúsculas
 ```
+#### Condición dentro de list comprehension
+También se pueden aplicar condiciones dentro de las comprensiones de listas para filtrar elementos. <br>
+Ejemplo:
+```python
+numeros = [1, 2, 3, 4, 5, 6]
+numeros_pares = [numero for numero in numeros if numero % 2 == 0]
+print(numeros_pares) # [2, 4, 6]
+```
+
+### Rango (range)
+La función `range()` se utiliza para generar una secuencia de números. Es comúnmente usada en bucles for. 
+Por defecto, `range()` comienza en 0 y aumenta de 1 en 1.
+Se puede especificar un inicio, un fin y un paso opcional. <br>
+Por ejemplo: `range(2, 10, 2)`, `range(inicio, fin, paso)` <br>
+Ejemplo:
+```python
+for num in range(0, 1000, 5):
+   print(num) # Imprime los números del 0 al 1000 de 5 en 5
+
+for num in range(10, 0, -1):
+   print(num) # Imprime los números del 10 al 1 en orden descendente
+```
+>![WARNING]
+>Range no crea una lista por sí misma, sino un objeto iterable que genera los números bajo demanda. 
+>
+>Para obtener una lista, se puede usar `list(range(...))`.
+>
+>Ejemplo:
+>```python
+>lista_numeros = list(range(10))
+>print(lista_numeros) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>```
+
