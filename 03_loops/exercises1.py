@@ -47,6 +47,7 @@ while True:
             numero -= 1
         print(factorial)
         factorial = 1
+        
     except:
             print("No es un numero.")
 
