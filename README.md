@@ -564,13 +564,11 @@ for letra in letras:
    for numero in numeros:
        print(f"{letra}{numero}") # Imprime la combinación de cada letra con cada número
 ```
-![](03_loops\Images\Python-Tutor-Example.png)
 
 >![NOTE]
 >Para ver cómo se ejecuta el código paso a paso, se puede probar en Python Tutor, una herramienta interactiva para analizar la ejecución de código en Python.
 
 [Python Tutor](https://pythontutor.com/index.html)
-![](03_loops\Images\Python-Tutor.png)
 
 ### Break y Continue
 * `break`: Permite salir del bucle antes de que la condición deje de cumplirse.
