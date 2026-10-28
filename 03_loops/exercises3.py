@@ -125,12 +125,25 @@ print("___________________")
 
 print("Ejercicio 1: Imprimir números del 1 al 10")
 
+def numeros_del_1_al_10():
+    for numero in range(1, 11):
+        print(numero)
+
+numeros_del_1_al_10()
+
 print("___________________")
 
 # Ejercicio 2: Imprimir números impares del 1 al 20
 # Imprime todos los números impares entre 1 y 20 (inclusive) usando un bucle for y range().
 
 print("Ejercicio 2: Imprimir números impares del 1 al 20")
+
+def numeros_impares_del_1_al_20():
+    for numero in range(1, 21):
+        if numero % 2 != 0:
+            print(numero)
+
+numeros_impares_del_1_al_20()
 
 print("___________________")
 
@@ -139,12 +152,25 @@ print("___________________")
 
 print("Ejercicio 3: Imprimir múltiplos de 5")
 
+def multiplos_de_5():
+    for numero in range(5, 51):
+        if numero % 5 == 0:
+            print(numero)
+
+multiplos_de_5()
+
 print("___________________")
 
 # Ejercicio 4: Imprimir números en orden inverso
 # Imprime los números del 10 al 1 (inclusive) en orden inverso usando un bucle for y range().
 
 print("Ejercicio 4: Imprimir números en orden inverso")
+
+def  numeros_orden_inverso():
+    for numero in range(10, 0, -1):
+        print(numero)
+
+numeros_orden_inverso()
 
 print("___________________")
 
@@ -153,6 +179,14 @@ print("___________________")
 
 print("Ejercicio 5: Suma de números en un rango")
 
+def suma_numeros_del_1_al_100():
+    suma = 0
+    for numero in range(1, 101):
+        suma += numero
+    return suma
+
+print(f"La suma de los números del 1 al 100 es: {suma_numeros_del_1_al_100()}")
+
 print("___________________")
 
 # Ejercicio 6: Tabla de multiplicar
@@ -160,6 +194,13 @@ print("___________________")
 # Imprime la tabla de multiplicar de ese número (del 1 al 10) usando un bucle for y range().
 
 print("Ejercicio 6: Tabla de multiplicar")
+
+def tabla_multiplicar():
+    numero = int(input("Introduce un número: "))
+    for i in range(1, 11):
+        print(f"{numero} x {i} = {numero * i}")
+
+tabla_multiplicar()
 
 print("___________________")
 
