@@ -43,6 +43,7 @@ ___
         * [Argumentos](#argumentos)
             * [Por clave](#por-clave)
             * [Longitud y clave-valor variables](#longitud-y-clave-valor-variables)
+* [Lógica](#logica)
    
 ___
 # Introducción
@@ -714,3 +715,6 @@ mostrar_informacion_de(nick="pheralb", es_sub=True, is_rich=True)
 mostrar_informacion_de(super_name="felixicaza", es_modo=True, gatos=40) 
 # super_name: felixicaza, es_modo: True, gatos: 40
 ```
+
+# Logica
+
