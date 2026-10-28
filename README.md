@@ -37,6 +37,12 @@ ___
             * [Condición dentro de list comprehension](#condición-dentro-de-list-comprehension)
         * [Rango (range)](#rango-range)
             * [Guion bajo `_`](#guion-bajo-_)
+    * [Funciones](#funciones)
+        * [Documentación de funciones](#documentación-de-funciones)
+        * [Parámetros por defecto](#parámetros-por-defecto)
+        * [Argumentos](#argumentos)
+            * [Por clave](#por-clave)
+            * [Longitud y clave-valor variables](#longitud-y-clave-valor-variables)
    
 ___
 # Introducción
@@ -626,4 +632,85 @@ Ejemplo:
 ```python
 for _ in range(5):
     print("Hacer 5 veces algo") # Se ignora el valor de la variable de bucle `_`
+```
+
+## Funciones
+Las funciones son bloques de código reutilizables y parametrizables para realizar tareas específicas. Se definen con la palabra clave `def` seguida del nombre de la función y los parámetros entre paréntesis. Usar minúsculas y guiones bajos para los nombres de las funciones es una convención en Python.<br>
+Ejemplo:
+```python
+def nombre_de_la_funcion(parametro1, parametro2, ...):
+    """Docstring: describe lo que hace la función"""
+    # cuerpo de la función
+    return valor_de_retorno # opcional
+
+nombre_de_la_funcion(argumento1, argumento2, ...)
+```
+Estas funciones deben ser invocadas para que su código se ejecute, pasando los argumentos necesarios según los parámetros definidos.
+
+### Documentacion de funciones
+La documentación de funciones se realiza mediante docstrings, que son cadenas de texto colocadas al inicio del cuerpo de la función. Sirven para describir lo que hace la función, sus parámetros y el valor de retorno.
+Ejemplo:
+```python
+def sumar(a, b):
+    """Suma dos números y devuelve el resultado"""
+    return a + b
+```
+Se puede acceder a la documentación de una función usando `help()`:
+```python
+help(sumar) # Muestra la documentación de la función sumar
+
+sumar.__doc__ # Muestra el docstring de la función sumar
+```
+
+### Parametros por defecto
+En Python, se pueden definir valores por defecto para los parámetros de una función. Si no se proporciona un argumento para ese parámetro al llamar a la función, se utilizará el valor por defecto.
+Ejemplo:
+```python
+def saludar(nombre="Mundo"):
+    print(f"Hola, {nombre}!")
+
+saludar() # Hola, Mundo!
+saludar("Alice") # Hola, Alice!
+```
+
+### Argumentos
+#### Por clave
+Los argumentos por clave permiten pasar valores a los parámetros de una función especificando el nombre del parámetro. Esto hace que el orden de los argumentos no sea importante y mejora la legibilidad del código.
+Ejemplo:
+```python
+def presentar(nombre, edad):
+    print(f"Nombre: {nombre}, Edad: {edad}")
+
+presentar(edad=30, nombre="Alice") # Nombre: Alice, Edad: 30
+```
+#### Longitud y clave-valor variables
+Función que acepta un número variable de argumentos.
+* `*args` permite pasar un número variable de argumentos posicionales a la función.
+* `**kwargs` permite pasar un número variable de argumentos por clave a la función.
+
+Ejemplo 1:
+```python
+def mostrar_info(*args, **kwargs):
+    print("Posicionales:", args)
+    print("Por clave:", kwargs)
+
+mostrar_info(1, 2, 3, nombre="Alice", edad=30) # Posicionales: (1, 2, 3), Por clave: {'nombre': 'Alice', 'edad': 30}
+```
+Ejemplo 2:
+```python
+def mostrar_informacion_de(**kwargs):
+   for clave, valor in kwargs.items():
+       print(f"{clave}: {valor}")
+ 
+mostrar_informacion_de(nombre="midudev", edad=25, sexo="gato") 
+# nombre: midudev, edad: 25, sexo: gato
+ 
+mostrar_informacion_de(name="madeval", edad=21, country="Uruguay") 
+# name: madeval, edad: 21, country: Uruguay
+ 
+mostrar_informacion_de(nick="pheralb", es_sub=True, is_rich=True) 
+# nick: pheralb, es_sub: True, is_rich: True
+ 
+mostrar_informacion_de(super_name="felixicaza", es_modo=True, gatos=40) 
+# super_name: felixicaza, es_modo: True, gatos: 40
 ```

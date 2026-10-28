@@ -49,7 +49,7 @@ while True:
         factorial = 1
         
     except:
-            print("No es un numero.")
+        print("No es un numero.")
 
 # Ejercicio 4: Validación de contraseña
 # Pide al usuario que introduzca una contraseña.
