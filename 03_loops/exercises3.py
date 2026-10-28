@@ -16,6 +16,14 @@ print("___________________")
 
 print("Ejercicio 1: Imprimir números pares")
 
+def imprimir_pares(inicio, final):
+    for numero in range(inicio, final + 1):
+        if numero % 2 == 0:
+            print(numero)
+    
+print("Los números pares del 2 al 20 son:")
+imprimir_pares(inicio=2, final=20)
+
 print("___________________")
 
 # Ejercicio 2: Calcular la media de una lista
@@ -25,7 +33,17 @@ print("___________________")
 
 print("Ejercicio 2: Calcular la media de una lista")
 
+def calcular_media(numeros):
+    suma = 0
+    for numero in numeros:
+        suma += numero
+    return suma / len(numeros) if numeros else 0
+
+numeros = [10, 20, 30, 40, 50]
+print(f"La media de la lista {numeros}:", calcular_media(numeros))
+
 print("___________________")
+
 
 # Ejercicio 3: Buscar el máximo de una lista
 # Dada la siguiente lista de números:
@@ -34,7 +52,18 @@ print("___________________")
 
 print("Ejercicio 3: Buscar el máximo de una lista")
 
+def maximo_lista(numeros):
+    maximo = numeros[0] if numeros else None
+    for numero in numeros:
+        if numero > maximo:
+            maximo = numero
+    return maximo
+
+numeros = [15, 5, 25, 10, 20]
+print(f"El máximo de la lista {numeros}:", maximo_lista(numeros))
+
 print("___________________")
+
 
 # Ejercicio 4: Filtrar cadenas por longitud
 # Dada la siguiente lista de palabras:
@@ -43,6 +72,13 @@ print("___________________")
 # usando un bucle for y list comprehension.
 
 print("Ejercicio 4: Filtrar cadenas por longitud")
+
+def filtrar_por_longitud5(palabras):
+    lista_filtrada = [palabra for palabra in palabras if len(palabra) > 5]
+    return lista_filtrada
+
+palabras = ["casa", "arbol", "sol", "elefante", "luna"]
+print(f"Las palabras con más de 5 letras en la lista {palabras}:", filtrar_por_longitud5(palabras))
 
 print("___________________")
 
@@ -53,6 +89,27 @@ print("___________________")
 # Cuenta cuántas palabras en la lista empiezan con esa letra (sin diferenciar mayúsculas/minúsculas).
 
 print("Ejercicio 5: Contar palabras que empiezan con una letra")
+
+def palabras_que_empiezan_con(palabras, letra):
+    count = 0
+    letra = letra.lower()
+    if letra == "Salir" or letra == "salir":
+        print("Saliendo...")
+        return None
+    for palabra in palabras:
+        if palabra.lower().startswith(letra):
+            count += 1
+    return count
+
+palabras = ["casa", "arbol", "sol", "elefante", "luna", "coche"]
+print(f"Lista de palabras: {palabras}")
+letra = input("Introduce una letra (o 'salir' para terminar): ")
+resultado = palabras_que_empiezan_con(palabras, letra)
+
+while resultado is not None:
+    print(f"Hay {resultado} palabras que empiezan con la letra '{letra}' en la lista {palabras}")
+    letra = input("Introduce una letra (o 'salir' para terminar): ")
+    resultado = palabras_que_empiezan_con(palabras, letra)
 
 ###
 # EJERCICIOS (range)
