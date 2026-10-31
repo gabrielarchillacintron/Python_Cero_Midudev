@@ -16,13 +16,20 @@ print("___________________")
 
 print("Ejercicio 1: Imprimir números pares")
 
-def imprimir_pares(inicio, final):
-    for numero in range(inicio, final + 1):
-        if numero % 2 == 0:
-            print(numero)
+def imprimir_pares(inicio=0, final=0):
+    while inicio != -1:
+        inicio = int(input("Introduce el número de inicio (o -1 para salir): "))
+        if inicio == -1:
+            break
+        final = int(input("Introduce el número final: "))
+        for numero in range(inicio, final + 1):
+            if numero % 2 == 0:
+                print(numero)
+    else:
+        print("Fin de la impresión de números pares.")
+        return None
     
-print("Los números pares del 2 al 20 son:")
-imprimir_pares(inicio=2, final=20)
+imprimir_pares()
 
 print("___________________")
 
@@ -33,14 +40,33 @@ print("___________________")
 
 print("Ejercicio 2: Calcular la media de una lista")
 
-def calcular_media(numeros):
-    suma = 0
-    for numero in numeros:
-        suma += numero
-    return suma / len(numeros) if numeros else 0
+def calcular_media():
+    numeros = []
+    while True:
+        entrada = input("Introduce uno o varios números (o escribe 'salir' para terminar): ").strip()
+        if entrada.lower() == "salir":
+            break
+        if entrada == "":
+            numeros = []
+            print("No se ingresaron números.")
+            continue
+        try:
+            nuevos_numeros = [int(numero) for numero in entrada.split()]
+        except ValueError:
+            print("Introduce únicamente números enteros.")
+            continue
 
-numeros = [10, 20, 30, 40, 50]
-print(f"La media de la lista {numeros}:", calcular_media(numeros))
+        numeros.extend(nuevos_numeros)
+        media = sum(numeros) / len(numeros)
+        print(f"La media de la lista {numeros}: {media}")
+        numeros = []
+
+    print("No se ingresaron números.")
+    print("Fin del cálculo de la media.")
+    return None
+
+calcular_media()
+
 
 print("___________________")
 
@@ -52,17 +78,37 @@ print("___________________")
 
 print("Ejercicio 3: Buscar el máximo de una lista")
 
-def maximo_lista(numeros):
-    maximo = numeros[0] if numeros else None
-    for numero in numeros:
-        if numero > maximo:
-            maximo = numero
-    return maximo
+def maximo_lista():
+    while True:
+        entrada = input("Introduce números separados por espacios (o escribe 'salir' para terminar): ").strip()
+        if entrada.lower() == "salir":
+            break
+        try:
+            numeros = [int(numero) for numero in entrada.split()]
+        except ValueError:
+            print("Introduce únicamente números enteros.")
+            continue
 
-numeros = [15, 5, 25, 10, 20]
-print(f"El máximo de la lista {numeros}:", maximo_lista(numeros))
+        if not numeros:
+            print("No se ingresaron números.")
+            continue
+
+        maximo = numeros[0]
+        for numero in numeros:
+            if numero > maximo:
+                maximo = numero
+        print(f"El número máximo es: {maximo}")
+
+    print("Fin de las pruebas.")
+
+maximo_lista()
 
 print("___________________")
+
+
+# /////////////////////////////////////////////////////////////////////////////////////////////////////
+# To Do: Seguir desde aqui haciendo los ejercicios con while para poder hacer todas las pruebas necesarias
+# /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 # Ejercicio 4: Filtrar cadenas por longitud
