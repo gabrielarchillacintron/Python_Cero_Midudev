@@ -101,12 +101,12 @@ def maximo_lista():
 
     print("Fin de las pruebas.")
 
-maximo_lista()
+maximo_lista() 
 
 print("___________________")
 
 
-# TODO : Seguir desde aqui imprementando ejercicios con bucles while para permitir múltiples pruebas sin reiniciar el programa.
+# TODO: Seguir desde aqui imprementando ejercicios con bucles while para permitir múltiples pruebas sin reiniciar el programa.
 
 
 # Ejercicio 4: Filtrar cadenas por longitud
@@ -115,7 +115,7 @@ print("___________________")
 # Crea una nueva lista que contenga solo las palabras con más de 5 letras
 # usando un bucle for y list comprehension.
 
-print("Ejercicio 4: Filtrar cadenas por longitud")
+print("Ejercicio 4: Filtrar cadenas por longitud") # TODO
 
 def filtrar_por_longitud5(palabras):
     lista_filtrada = [palabra for palabra in palabras if len(palabra) > 5]
@@ -132,7 +132,7 @@ print("___________________")
 # Pide al usuario que introduzca una letra.
 # Cuenta cuántas palabras en la lista empiezan con esa letra (sin diferenciar mayúsculas/minúsculas).
 
-print("Ejercicio 5: Contar palabras que empiezan con una letra")
+print("Ejercicio 5: Contar palabras que empiezan con una letra") # TODO
 
 def palabras_que_empiezan_con(palabras, letra):
     count = 0
@@ -167,7 +167,7 @@ print("___________________")
 # Ejercicio 1: Imprimir números del 1 al 10
 # Imprime los números del 1 al 10 (inclusive) usando un bucle for y range().
 
-print("Ejercicio 1: Imprimir números del 1 al 10")
+print("Ejercicio 1: Imprimir números del 1 al 10") # TODO
 
 def numeros_del_1_al_10():
     for numero in range(1, 11):
@@ -180,7 +180,7 @@ print("___________________")
 # Ejercicio 2: Imprimir números impares del 1 al 20
 # Imprime todos los números impares entre 1 y 20 (inclusive) usando un bucle for y range().
 
-print("Ejercicio 2: Imprimir números impares del 1 al 20")
+print("Ejercicio 2: Imprimir números impares del 1 al 20") # TODO
 
 def numeros_impares_del_1_al_20():
     for numero in range(1, 21):
@@ -194,7 +194,7 @@ print("___________________")
 # Ejercicio 3: Imprimir múltiplos de 5
 # Imprime los múltiplos de 5 desde 5 hasta 50 (inclusive) usando un bucle for y range().
 
-print("Ejercicio 3: Imprimir múltiplos de 5")
+print("Ejercicio 3: Imprimir múltiplos de 5") # TODO
 
 def multiplos_de_5():
     for numero in range(5, 51):
@@ -208,7 +208,7 @@ print("___________________")
 # Ejercicio 4: Imprimir números en orden inverso
 # Imprime los números del 10 al 1 (inclusive) en orden inverso usando un bucle for y range().
 
-print("Ejercicio 4: Imprimir números en orden inverso")
+print("Ejercicio 4: Imprimir números en orden inverso") # TODO
 
 def  numeros_orden_inverso():
     for numero in range(10, 0, -1):
@@ -221,7 +221,7 @@ print("___________________")
 # Ejercicio 5: Suma de números en un rango
 # Calcula la suma de los números del 1 al 100 (inclusive) usando un bucle for y range().
 
-print("Ejercicio 5: Suma de números en un rango")
+print("Ejercicio 5: Suma de números en un rango") # TODO
 
 def suma_numeros_del_1_al_100():
     suma = 0
@@ -237,7 +237,7 @@ print("___________________")
 # Pide al usuario que introduzca un número.
 # Imprime la tabla de multiplicar de ese número (del 1 al 10) usando un bucle for y range().
 
-print("Ejercicio 6: Tabla de multiplicar")
+print("Ejercicio 6: Tabla de multiplicar") # TODO
 
 def tabla_multiplicar():
     numero = int(input("Introduce un número: "))
