@@ -106,9 +106,7 @@ maximo_lista()
 print("___________________")
 
 
-# /////////////////////////////////////////////////////////////////////////////////////////////////////
-# To Do: Seguir desde aqui haciendo los ejercicios con while para poder hacer todas las pruebas necesarias
-# /////////////////////////////////////////////////////////////////////////////////////////////////////
+# TODO : Seguir desde aqui imprementando ejercicios con bucles while para permitir múltiples pruebas sin reiniciar el programa.
 
 
 # Ejercicio 4: Filtrar cadenas por longitud
