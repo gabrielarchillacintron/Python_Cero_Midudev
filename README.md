@@ -470,7 +470,7 @@ print(lista)  # [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 ```
 ## Metodos para listas
 * `append(elemento)`: Agrega un solo elemento al final de la lista.
-* `extend(lista)`: Agrega múltiples elementos al final de la lista.
+* `extend(lista)`: Agrega múltiples elementos al final de la lista. Agrega letra por letra si se pasa una cadena.
 * `insert(indice, elemento)`: Inserta un elemento en la posición especificada.
 * `remove(elemento)`: Elimina la primera aparición del elemento en la lista.
 * `pop(indice)`: Elimina y devuelve el elemento en la posición especificada. Si no se especifica el índice, elimina y devuelve el último elemento.
@@ -483,6 +483,10 @@ En el caso de texto, se puede utilizar el parámetro `key=str.lower` para ordena
 * `clear()`: Elimina todos los elementos de la lista.
 * `copy()`: Devuelve una copia superficial de la lista.
 * `len(lista)`: Devuelve la cantidad de elementos en la lista de 1 a n.
+* `split()`: Divide una cadena en una lista de subcadenas según un separador especificado.
+* `join(lista)`: Une los elementos de una lista en una sola cadena, utilizando la cadena como separador.
+* `strip()`: Elimina los espacios en blanco al inicio y al final de una cadena.
+
 
 >[!NOTE]
 >Para eliminar un rango de elementos de una lista se puede utilizar slicing y la palabra clave `del`.
