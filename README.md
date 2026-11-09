@@ -2,7 +2,7 @@
 >Curso de Python desde cero de Midudev <br>
 >[Youtube](https://www.youtube.com/@midudev) | [Video](https://youtu.be/TkN2i-_4N4g) | [Clase](https://midu.dev/curso/python-desde-cero/)
 ___
-# Índice
+# Indice
 * [Introducción](#introducción)
 * [Datos y Variables](#datos-y-variables)
     * [Módulos](#módulos)
@@ -44,6 +44,9 @@ ___
             * [Por clave](#por-clave)
             * [Longitud y clave-valor variables](#longitud-y-clave-valor-variables)
 * [Lógica](#logica)
+    * [Simplificación de condiciones](#simplificación-de-condiciones)
+    * [Optimizacion](#optimizacion)
+    * [Diccionarios](#diccionarios)
    
 ___
 # Introducción
@@ -577,14 +580,14 @@ for letra in letras:
        print(f"{letra}{numero}") # Imprime la combinación de cada letra con cada número
 ```
 
-![Python Tutor Example](03_loops/Images/Python-Tutor-Example.png)
+![Python Tutor Example](Images/Python-Tutor-Example.png)
 
 >[!NOTE]
 >Para ver cómo se ejecuta el código paso a paso, se puede probar en Python Tutor, una herramienta interactiva para analizar la ejecución de código en Python.
 >
 >[Python Tutor](https://pythontutor.com/index.html)
 >
->![Python Tutor](03_loops/Images/Python-Tutor.png)
+>![Python Tutor](Images/Python-Tutor.png)
 
 ### Break y Continue
 * `break`: Permite salir del bucle antes de que la condición deje de cumplirse.
@@ -621,6 +624,7 @@ for num in range(10, 0, -1):
    print(num) # Imprime los números del 10 al 1 en orden descendente
 ```
 >[!WARNING]
+>
 >Range no crea una lista por sí misma, sino un objeto iterable que genera los números bajo demanda. 
 >
 >Para obtener una lista, se puede usar `list(range(...))`.
@@ -651,6 +655,15 @@ def nombre_de_la_funcion(parametro1, parametro2, ...):
 nombre_de_la_funcion(argumento1, argumento2, ...)
 ```
 Estas funciones deben ser invocadas para que su código se ejecute, pasando los argumentos necesarios según los parámetros definidos.
+
+Se puede decir lo que devuelve la función mediante el docstring, indicando el valor de retorno esperado. <br>
+Ejemplo:
+```python
+def sumar(a, b) -> int:
+    """Suma dos números y devuelve el resultado"""
+    return a + b
+```
+    
 
 ### Documentacion de funciones
 La documentación de funciones se realiza mediante docstrings, que son cadenas de texto colocadas al inicio del cuerpo de la función. Sirven para describir lo que hace la función, sus parámetros y el valor de retorno.
@@ -722,3 +735,49 @@ mostrar_informacion_de(super_name="felixicaza", es_modo=True, gatos=40)
 
 # Logica
 
+## Simplificación de condiciones
+
+En Python, se pueden simplificar las condiciones que retornan True o False directamente. Por ejemplo, en lugar de usar: <br>
+Ejemplo:
+```python
+if count_r == count_j:
+    return True
+else:
+    return False
+```
+
+Se puede usar directamente:
+
+```python
+return count_r == count_j
+```
+
+## Optimizacion
+* Usar operadores de asignación compuestos como `+=`, `-=`, `*=`, `/=`, etc., en lugar de la forma larga como `total = total + value`.
+
+## Diccionarios
+Los diccionarios en Python son estructuras de datos que almacenan pares clave-valor. Permiten acceder a los valores mediante sus claves de manera eficiente. <br>
+Ejemplo:
+```python
+# tipico de diccionario
+persona = {
+  "nombre": "midudev",
+  "edad": 25,
+  "es_estudiante": True,
+  "calificaciones": [7, 8, 9],
+  "socials": {
+    "twitter": "@midudev",
+    "instagram": "@midudev",
+    "facebook": "midudev"
+  }
+}
+
+# para acceder a los valores
+print(persona["nombre"]) # midudev
+print(persona["calificaciones"][2]) # 9
+print(persona["socials"]["twitter"]) # @midudev
+```
+
+>[!NOTE]
+>
+> Mirar secciones 3 y 4 del capítulo 4.
